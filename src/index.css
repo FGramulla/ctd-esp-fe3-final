@@ -72,16 +72,18 @@ form{
 
 .card{
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
 }
 
-.card:hover{
+.card-doc:hover{
   border: 0.5px solid rgb(206, 217, 142);
+}
+
+.card-doc{
+  margin-left: 20px;
+  display: block;
 }
 
 .card-grid{
