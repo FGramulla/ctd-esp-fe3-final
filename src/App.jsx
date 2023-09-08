@@ -13,14 +13,14 @@ import Card from "./Components/Card";
 function App() {
   return (
       <div className="App">
-          <Home/>
-          {/* <Routes>
-            <Route path="/" element={Home}/>
-            <Route path="/Contact" element={Contact}/>
-            <Route path="/dentista/:id" element={Detail}/>
-            <Route path="/Favs" element={Favs}/>
-          </Routes> */}
           <Navbar/>
+          {/* <Home/> */}
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/Contact" element={<Contact/>}/>
+            <Route path="/dentista/:id" element={Detail}/>
+            <Route path="/Favs" element={<Favs/>}/>
+          </Routes>
           <Footer/>
       </div>
   );

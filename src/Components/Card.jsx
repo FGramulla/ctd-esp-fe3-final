@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import "../styles/Cards.css"
 import { Link } from 'react-router-dom'
 
 
@@ -35,7 +36,6 @@ const Card = ({ name, username, id }) => {
         {/* En cada card deberan mostrar en name - username y el id */}
         {doctor.map(doc => (
         <div key={doc.id} className="card-doc">
-          
           <img src="../img/doctor.jpg" height={150} alt=""/>
           <p>{doc.name}</p>
           <p>{doc.username}</p>
