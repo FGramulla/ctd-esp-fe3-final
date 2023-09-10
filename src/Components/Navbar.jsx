@@ -10,14 +10,12 @@ const Navbar = () => {
     <nav>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-        <Link to="/" className="site-title">
-          DH Odonto
-        </Link>
+        <Link to="/" className="site-title"><p>DH Odonto</p></Link>
       <div className='nav-bar'>
-          <ul>
-            <Link to="/">Home</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/favs">Favs</Link>
+          <ul className='ulWithList'> 
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/favs">Favs</Link></li>
           </ul>
         <button id='btn'>Change theme</button>
       </div>

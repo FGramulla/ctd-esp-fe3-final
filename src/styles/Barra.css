@@ -4,19 +4,52 @@ nav{
     justify-content: space-between;
     background-color: #e2e2e2;
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
+    /* width: 80vw; */
+    /* justify-content: flex-start; */
+    padding: 1rem;
 }
 
 .nav-bar {
     display: flex;
-    margin-right: 150px;
+    flex-direction: row;
+    margin-right: 100px;
+    margin-left: 100px;
     gap: 15px;
+    align-items: center;
 }
 
-.nav-bar ul link {
-    gap: 150px;
+.site-title{
+    margin-left: 30px;
+    text-decoration: none;
+    color: inherit;
 }
+
+.site-title:hover{
+    color: #535353;
+}
+
+.ulWithList {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    color: inherit;
+    list-style: none;
+}
+
+.ulWithList a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+.ulWithList a:hover {
+    color: #535353;
+}
+
 
 #btn {
-    color: red;
+    margin-top: 10px;
+    color: rgb(105, 238, 105);
 }

@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   overflow-x: hidden;
   width: 100%;
@@ -12,6 +16,24 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+main h1{
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer  img {
+  width: 15%;
 }
 /* .favButton{
   background-color: rgba(136, 136, 136, 0.116);
@@ -41,28 +63,9 @@ a{
 a:hover{
   color: rgb(136, 136, 136);
 } 
+*/
 
-footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
-}
-
-footer > img{
-  width: 200px;
-  margin: 0;
-}
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
-}
-
+/*
 form{
   display: flex;
   flex-direction: column;
