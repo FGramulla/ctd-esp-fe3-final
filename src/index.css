@@ -1,3 +1,5 @@
+https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css
+
 *{
   box-sizing: border-box;
 }
@@ -28,12 +30,21 @@ main h1{
 }
 
 footer {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
 }
 
 footer  img {
   width: 15%;
+}
+
+.dark{
+  background-color: #000000e0;
+  color: white;
+}
+.dark > a {
+  color: white;
 }
 /* .favButton{
   background-color: rgba(136, 136, 136, 0.116);

@@ -6,14 +6,14 @@ import { useDocStates } from "../Context/Context";
 
 const Favs = () => {
 
-  const {favs} = useDocStates();
+  const {state} = useDocStates();
   
 
   return (
     <>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
-        {favs.map(fav => <Card dentista={fav} key={fav.id}/>)}
+        {state.favs.map(fav => <Card dentista={fav} key={fav.id}/>)}
       </div>
     </>
   );

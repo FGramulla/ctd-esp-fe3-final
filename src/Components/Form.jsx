@@ -13,8 +13,8 @@ const Form = () => {
 
   const onChange = (e) => {
     const { value, name} = e.target;
-    setForm((state) => ({
-      ...state,
+    setForm((estado) => ({
+      ...estado,
       [name]: value 
     }));
   }

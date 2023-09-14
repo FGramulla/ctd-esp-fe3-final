@@ -5,7 +5,18 @@ import { Link } from "react-router-dom";
 
 const Card = ({ dentista }) => {
 
-  const {fav, setFavs} = useDocStates()
+  const {state, dispatch} = useDocStates();
+  const findOdontologo = state.favs.find(fav => fav.id == dentista.id);
+
+
+  const addFav = ()=>{
+    if(findOdontologo){
+      dispatch({type: 'DELETE_FAV', payload: findOdontologo})
+    } else {
+      dispatch({type: 'ADD_FAV', payload: dentista})
+    }
+  }
+
 
   return (
     <div className="card">
@@ -16,7 +27,7 @@ const Card = ({ dentista }) => {
             <h3>{dentista.username}</h3>
             <h1>{dentista.id}</h1>
           </Link>
-          <button onClick={() => setFavs((prevFavs) => [...prevFavs, dentista])} className="favButton">⭐</button>
+          <button onClick={addFav} className="favButton">⭐</button>
         </div>  
     </div>
   );

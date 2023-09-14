@@ -5,11 +5,17 @@ import Contact from "./Routes/Contact";
 import Detail from "./Routes/Detail";
 import Favs from "./Routes/Favs";
 import { Route, Routes } from 'react-router-dom';
+import { useDocStates } from "./Context/Context";
 
 
 
 function App() {
+
+  const { state } = useDocStates(); 
+  const bodyClassName = `body ${state.theme}`
+
   return (
+    <html className= {bodyClassName}>
       <div className="App">
           <Navbar/>
           <Routes>
@@ -20,6 +26,7 @@ function App() {
           </Routes>
           <Footer/>
       </div>
+    </html>
   );
 }
 

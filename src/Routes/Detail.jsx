@@ -1,27 +1,32 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { useDocStates } from '../Context/Context';
 
 
 const Detail = () => {
-  const [dentista, setDentista] = useState({});
+  const {state, dispatch} = useDocStates()
   const params = useParams();
-  console.log(params)
+  const {name,email,phone,website} = state.dentista;
 
   const url = "https://jsonplaceholder.typicode.com/users/" + params.id;
 
   useEffect(() => {
     axios(url)
-    .then(res => setDentista(res.data))
-  }, [])
+    .then(res => dispatch({type: 'GET_DENTISTA', payload: res.data}))
+}, [])
 
 
   return (
     <>
-      <h1>{dentista.name}</h1>
-        <h3>{dentista.email}</h3>
-        <h4>{dentista.phone}</h4>
-        <h5>{dentista.website}</h5>
+    <div className='detail'>
+        <h1>Detail Dentist id </h1>
+        <h1>Nombre: {name}</h1>
+        <img src="/images/doctor.jpg" alt="" className="card-image"/>
+        <h3>Email: {email}</h3>
+        <h3>Telefono: {phone}</h3>
+        <h3>Website: {website}</h3>
+    </div>
     </>
   )
 }

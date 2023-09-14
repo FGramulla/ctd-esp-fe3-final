@@ -5,13 +5,13 @@ import Card from '../Components/Card'
 
 
 const Home = () => {
-    const { dentistas } = useDocStates();
+    const {state} = useDocStates();
     // console.log(dentistas)
   return (
     <main className="">
       <h1>Home</h1>
       <div className='card-grid'>
-        {dentistas.map(dentista => (<Card dentista={dentista} key={dentista.id}/>))}
+        {state.dentistas.map(dentista => (<Card dentista={dentista} key={dentista.id}/>))}
     </div>
     </main>
   )

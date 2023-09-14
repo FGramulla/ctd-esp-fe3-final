@@ -1,10 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "../styles/Barra.css";
+import { useDocStates } from '../Context/Context';
+
+
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
+  const { state, dispatch } = useDocStates(); 
 
+  const toggleTheme = () => {
+    dispatch({ type: 'SWITCH_THEME' }); // Activa la acción SWITCH_THEME del contexto
+  };
+
+  const bodyClassName = `body ${state.theme}`
 
   return (
     <nav>
@@ -17,7 +26,7 @@ const Navbar = () => {
           <li><Link to="/contact">Contact</Link></li>
           <li><Link to="/favs">Favs</Link></li>
           </ul>
-        <button id='btn'>Change theme</button>
+        <button onClick={toggleTheme} id='btn'><img src="../img/luna.png" width={"20px"} height={"20px"} alt="" /></button>
       </div>
       
     </nav>
