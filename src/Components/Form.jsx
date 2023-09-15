@@ -30,9 +30,13 @@ const onSubmit = (e) => {
   return (
     <div className="form-div">
       <form onSubmit={onSubmit}>
-      <label htmlFor="">Username: <input onChange={onChange} type="username" name="username" value={form.username}/></label>
-      <label htmlFor="">Email: <input onChange={onChange} type="email" name="email" value={form.email}/></label>
-      <button onClick={showData}>Submit</button>
+        <div>
+          <label htmlFor="">Username:</label>
+          <input onChange={onChange} type="username" name="username" value={form.username}/>
+          <label htmlFor="">Email:</label>
+          <input onChange={onChange} type="email" name="email" value={form.email}/>
+        </div>
+          <button onClick={showData}>Submit</button>
       </form>
     </div>
   );

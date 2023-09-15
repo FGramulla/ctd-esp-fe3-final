@@ -8,7 +8,6 @@ const Card = ({ dentista }) => {
   const {state, dispatch} = useDocStates();
   const findOdontologo = state.favs.find(fav => fav.id == dentista.id);
 
-
   const addFav = ()=>{
     if(findOdontologo){
       dispatch({type: 'DELETE_FAV', payload: findOdontologo})
@@ -17,20 +16,22 @@ const Card = ({ dentista }) => {
     }
   }
 
-
   return (
     <div className="card">
         <div className="card-doc">
-          <Link to={'/detail/' + dentista.id}>
             <img src="../img/doctor.jpg" alt=""/>
-            <h2>name: {dentista.name}</h2>
+            <h2>{dentista.name}</h2>
             <h3>{dentista.username}</h3>
-            <h1>{dentista.id}</h1>
-          </Link>
+            <Link to={'/detail/' + dentista.id}>
+            <div className="detallesDentista">
+              <p>Detalles de {dentista.name}</p>
+            </div>
+            </Link>
           <button onClick={addFav} className="favButton">⭐</button>
         </div>  
     </div>
   );
+
 };
 
 export default Card;

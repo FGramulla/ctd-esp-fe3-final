@@ -1,3 +1,4 @@
+import "../styles/Favs.css"
 import React from "react";
 import Card from "../Components/Card";
 import { useDocStates } from "../Context/Context";
@@ -11,10 +12,12 @@ const Favs = () => {
 
   return (
     <>
+    <div className="favs">
       <h1>Dentists Favs</h1>
       <div className="card-grid">
         {state.favs.map(fav => <Card dentista={fav} key={fav.id}/>)}
       </div>
+    </div>
     </>
   );
 };

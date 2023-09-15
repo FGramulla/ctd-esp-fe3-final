@@ -7,6 +7,7 @@ https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css
 body {
   overflow-x: hidden;
   width: 100%;
+  height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -30,13 +31,14 @@ main h1{
 }
 
 footer {
-  margin-top: 100px;
+  background-color: rgb(150, 150, 150);
+  margin-top: 20%;
   display: flex;
   justify-content: center;
 }
 
 footer  img {
-  width: 15%;
+  width: 20%;
 }
 
 .dark{
